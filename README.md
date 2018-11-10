@@ -1,1 +1,1 @@
-"My personal tool configurations" 
+# My personal tool configurations
