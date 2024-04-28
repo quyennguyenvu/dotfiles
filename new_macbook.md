@@ -2,34 +2,34 @@
 
 ## Apps
 
-- [ ] Download brave
-- [ ] Dropbox
-- [ ] KeepassXc
-- [ ] orbstack
-- [ ] vscode (install `code command`)
-- [ ] tableplus
-- [ ] insomnia
-- [ ] gotiengviet (`ctrl+space`)
-- [ ] monitor control, flux
-- [ ] logi option+, garmin express, wps obsidian
-- [ ] telegram, messenger
-- [ ] WARP
-- [ ] AppCleaner
+- Download brave (`Sync bookmark and opened tabs`)
+- Dropbox
+- KeepassXc
+- orbstack
+- vscode (install `code command`)
+- tableplus
+- insomnia
+- gotiengviet (`ctrl+space`)
+- monitor control, flux
+- logi option+, garmin express, wps, obsidian
+- telegram, messenger
+- WARP
+- AppCleaner
 
 ## Configurations
 
 ### System settings
 
 - Turn off all notifications
-- Focus &rarr; Share across devices &rarr; `disable`
+- Focus &rarr; Share across devices: `disable`
 - Apprearance
-- Lock Screen &rarr; Require password immediately
+- Lock Screen: `Require password immediately`
 - Dim on battery: `disable`
 - Keyboard navigation: `enable`
-- Keyboard Shortcuts &rarr; `remove F11`
-- Hot corners &rarr; `remove all`
-- Stage manager &rarr; `enable`
-- Show windows from an application &rarr; `One at a Time`
+- Keyboard Shortcuts: `remove F11`
+- Hot corners: `remove all`
+- Stage manager: `enable`
+- Show windows from an application: `One at a Time`
 
 ### Setup dock show/hide faster
 
@@ -49,10 +49,10 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 killall Dock
 ```
 
-### iterm2
+### Setup iterm2
 
-- General &rarr; Closing &rarr; Confirm "Quit iTerm2" &rarr; `disable`
-- Apprearance &rarr; Windows &rarr; Hide scrollbars &rarr; `disable`
+- General &rarr; Closing &rarr; Confirm "Quit iTerm2": `disable`
+- Apprearance &rarr; Windows &rarr; Hide scrollbars: `disable`
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
 
 ```bash
@@ -70,7 +70,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-### homebrew
+### Setup homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL <https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh>)"
@@ -95,10 +95,16 @@ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 ```
 
-### go
+### Config go environment
 
 ```bash
 # add to .zshrc
 export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
 ```
+
+### Email
+
+- Download Attachments: `None`
+- Signatures
+- Add accounts
