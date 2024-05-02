@@ -10,8 +10,9 @@
 - tableplus
 - insomnia
 - gotiengviet (`ctrl+space`)
-- monitor control, flux
-- logi option+, garmin express, wps, obsidian
+- better display (monitor control), flux
+- logi option+, garmin express
+- wps, obsidian
 - telegram, messenger
 - WARP
 - AppCleaner
