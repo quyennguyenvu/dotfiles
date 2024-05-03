@@ -109,3 +109,11 @@ export PATH=$GOPATH/bin:$PATH
 - Download Attachments: `None`
 - Signatures
 - Add accounts
+
+### Obsidian
+
+Config new vault
+
+- Editor &rarr; Show line number: `enable`
+- Files and links &rarr; config default location in vault folder and attachments in subfolder
+- Config daily logs folder
