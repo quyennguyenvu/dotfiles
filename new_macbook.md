@@ -96,10 +96,30 @@ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 ```
 
+### Setup direnv
+
+```bash
+brew install direnv
+```
+
+To use both `.env` and `.envrc`
+
+```toml
+# add to ~/.config/direnv/direnv.toml
+[global]
+load_dotenv = true
+```
+
+restart `zsh`
+
+```bash
+exec zsh
+```
+
 ### Config go environment
 
 ```bash
-# add to .zshrc
+# add to ~/.zshrc
 export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
 ```
