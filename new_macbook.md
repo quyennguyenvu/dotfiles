@@ -31,6 +31,8 @@
 - Hot corners: `remove all`
 - Stage manager: `enable`
 - Show windows from an application: `One at a Time`
+- Use F1, F2, etc. keys as standard function keys
+- Disable input source
 
 ### Setup dock show/hide faster
 
@@ -137,3 +139,8 @@ Config new vault
 - Editor &rarr; Show line number: `enable`
 - Files and links &rarr; config default location in vault folder and attachments in subfolder
 - Config daily logs folder
+
+### Better display
+
+- Make fine scale default for volume keys
+- Customize app content: show volume, hide resolution
