@@ -57,6 +57,7 @@ killall Dock
 - General &rarr; Closing &rarr; Confirm "Quit iTerm2": `disable`
 - Apprearance &rarr; Windows &rarr; Hide scrollbars: `disable`
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
+- [Config fonts for vscode](https://github.com/romkatv/powerlevel10k/issues/671)
 
 ```bash
 # oh-my-zsh
