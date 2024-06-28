@@ -33,6 +33,10 @@
 - Show windows from an application: `One at a Time`
 - Use F1, F2, etc. keys as standard function keys
 - Disable input source
+- Jump to the spot that's clicked
+- Automatically rearrange Spaces based on most recent use
+- Key repeat rate: `max`
+- Delay until repeat: `max-1`
 
 ### Setup dock show/hide faster
 
@@ -72,6 +76,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```bash
 # zsh auto-suggestions
 git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+```bash
+brew install tmux
+brew install telnet
 ```
 
 ### Setup homebrew
