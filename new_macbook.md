@@ -14,7 +14,7 @@
 - logi option+, garmin express
 - wps, obsidian
 - telegram, messenger
-- WARP
+- ChatGPT
 - AppCleaner
 
 ## Configurations
