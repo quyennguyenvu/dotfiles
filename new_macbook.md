@@ -78,15 +78,22 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-```bash
-brew install tmux
-brew install telnet
-```
-
 ### Setup homebrew
 
 ```bash
 /bin/bash -c "$(curl -fsSL <https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh>)"
+```
+
+### Setup tmux
+
+```bash
+brew install tmux
+tmux show -g > ~/.tmux.conf
+```
+
+```bash
+# add to `~/.tmux.conf`
+set-option -g mouse on
 ```
 
 ```bash
