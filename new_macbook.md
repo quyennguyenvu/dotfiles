@@ -41,24 +41,16 @@
 ### Setup dock show/hide faster
 
 ```bash
-defaults write com.apple.dock autohide -bool true
-```
-
-```bash
-defaults write com.apple.dock autohide-delay -float 0
-```
-
-```bash
-defaults write com.apple.dock autohide-time-modifier -float 0.5
-```
-
-```bash
+defaults write com.apple.dock autohide -bool true && \
+defaults write com.apple.dock autohide-delay -float 0 && \
+defaults write com.apple.dock autohide-time-modifier -float 0.5 && \
 killall Dock
 ```
 
 ### Setup iterm2
 
 - General &rarr; Closing &rarr; Confirm "Quit iTerm2": `disable`
+- Apprearance &rarr; General &rarr; Theme: `minimal`, Location: `Top`
 - Apprearance &rarr; Windows &rarr; Hide scrollbars: `disable`
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
 - [Config fonts for vscode](https://github.com/romkatv/powerlevel10k/issues/671)
@@ -88,30 +80,17 @@ git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh
 
 ```bash
 brew install tmux
-tmux show -g > ~/.tmux.conf
-```
 
-```bash
-# add to `~/.tmux.conf`
-set-option -g mouse on
-```
-
-```bash
-# add to ~/.zshrc
-eval "$(/opt/homebrew/bin/brew shellenv)"
+copy file `.tmux.conf` to `~/`
+# restart tmux
+tmux source ~/.tmux.conf
 ```
 
 ### Config github ssh key
 
 ```bash
-chmod 400 ~/.ssh/id_rsa_leo
-```
-
-```bash
-eval "$(ssh-agent -s)"
-```
-
-```bash
+chmod 400 ~/.ssh/id_rsa_leo && \
+eval "$(ssh-agent -s)" && \
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 ```
 
@@ -121,26 +100,12 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 brew install direnv
 ```
 
-To use both `.env` and `.envrc`
-
-```toml
-# add to ~/.config/direnv/direnv.toml
-[global]
-load_dotenv = true
-```
+To use both `.env` and `.envrc` add file `direnv.toml` to `~/.config/direnv/`
 
 restart `zsh`
 
 ```bash
 exec zsh
-```
-
-### Config go environment
-
-```bash
-# add to ~/.zshrc
-export GOPATH=$(go env GOPATH)
-export PATH=$GOPATH/bin:$PATH
 ```
 
 ### Email
