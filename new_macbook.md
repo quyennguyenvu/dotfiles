@@ -38,6 +38,12 @@
 - Key repeat rate: `max`
 - Delay until repeat: `max-1`
 
+### Remove accent windows
+
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
 ### Setup dock show/hide faster
 
 ```bash
