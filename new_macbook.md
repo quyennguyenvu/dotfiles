@@ -56,6 +56,7 @@ killall Dock
 ### Setup iterm2
 
 - General &rarr; Closing &rarr; Confirm "Quit iTerm2": `disable`
+- General &rarr; Selection &rarr; Applications in terminal may access clipboard: `enable`
 - Apprearance &rarr; General &rarr; Theme: `minimal`, Location: `Top`
 - Apprearance &rarr; Windows &rarr; Hide scrollbars: `disable`
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
@@ -83,9 +84,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ```bash
 brew install tmux
+```
 
-copy file `.tmux.conf` to `~/`
-# restart tmux
+copy file `.tmux.conf` to `~/` then restart tmux
+
+```bash
 tmux source ~/.tmux.conf
 ```
 
@@ -103,9 +106,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 brew install direnv
 ```
 
-To use both `.env` and `.envrc` add file `direnv.toml` to `~/.config/direnv/`
-
-restart `zsh`
+To use both `.env` and `.envrc`, add file `direnv.toml` to `~/.config/direnv/` then restart `zsh`
 
 ```bash
 exec zsh
