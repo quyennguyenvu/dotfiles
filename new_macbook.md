@@ -26,17 +26,22 @@
 - Apprearance
 - Lock Screen: `Require password immediately`
 - Dim on battery: `disable`
-- Keyboard navigation: `enable`
-- Keyboard Shortcuts: `remove F11`
 - Hot corners: `remove all`
 - Stage manager: `enable`
 - Show windows from an application: `One at a Time`
-- Use F1, F2, etc. keys as standard function keys
-- Disable input source
-- Jump to the spot that's clicked
-- Automatically rearrange Spaces based on most recent use
+- Click in the scrollbar to &rarr; Jump to the spot that's clicked
+- Automatically rearrange Spaces based on most recent use: `disable`
 - Key repeat rate: `max`
 - Delay until repeat: `max-1`
+
+### Config keyboard
+
+- Keyboard navigation: `enable`
+- Keyboard Shortcuts: `remove F11`
+- Disable input source: `Keyboard Shortcuts` &rarr; `Input Sources` &rarr; `disable`
+- Use F1, F2, etc. keys as standard function keys: `Keyboard Shortcuts` &rarr; `Function keys`
+- Remove `fn` key action
+- Dictation &rarr; auto-punctuation: `disable`
 
 ### Remove accent windows
 
