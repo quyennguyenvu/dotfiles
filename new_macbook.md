@@ -85,6 +85,29 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+### Setup asdf
+
+[Guide](https://asdf-vm.com/guide/getting-started.html)
+
+```bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+asdf plugin add erlang
+asdf plugin add elixir
+asdf install erlang latest
+asdf install elixir latest
+asdf global erlang <latest_version>
+asdf global elixir <latest_version>
+```
+
+### Setup pyenv
+
+```bash
+brew install xz
+brew install pyenv
+pyenv install <latest_version>
+pyenv global <latest_version>
+```
+
 ### Setup tmux
 
 ```bash
