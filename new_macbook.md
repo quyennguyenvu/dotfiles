@@ -85,7 +85,27 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Setup asdf
+### Setup zsh plugins
+
+#### zsh-syntax-highlighting
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+#### zsh-autosuggestionss
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+#### you-should-use
+
+```bash
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+```
+
+#### asdf
 
 [Guide](https://asdf-vm.com/guide/getting-started.html)
 
@@ -99,13 +119,25 @@ asdf global erlang <latest_version>
 asdf global elixir <latest_version>
 ```
 
-### Setup pyenv
+#### pyenv
 
 ```bash
 brew install xz
 brew install pyenv
 pyenv install <latest_version>
 pyenv global <latest_version>
+```
+
+#### direnv
+
+```bash
+brew install direnv
+```
+
+To use both `.env` and `.envrc`, add file `direnv.toml` to `~/.config/direnv/` then restart `zsh`
+
+```bash
+exec zsh
 ```
 
 ### Setup tmux
@@ -126,18 +158,6 @@ tmux source ~/.tmux.conf
 chmod 400 ~/.ssh/id_rsa_leo && \
 eval "$(ssh-agent -s)" && \
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
-```
-
-### Setup direnv
-
-```bash
-brew install direnv
-```
-
-To use both `.env` and `.envrc`, add file `direnv.toml` to `~/.config/direnv/` then restart `zsh`
-
-```bash
-exec zsh
 ```
 
 ### Email
