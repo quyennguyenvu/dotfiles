@@ -50,12 +50,13 @@
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-### Setup dock show/hide faster
+### Setup dock show/hide faster and stop bouncing
 
 ```bash
 defaults write com.apple.dock autohide -bool true && \
 defaults write com.apple.dock autohide-delay -float 0 && \
 defaults write com.apple.dock autohide-time-modifier -float 0.5 && \
+defaults write com.apple.dock no-bouncing -bool TRUE && \
 killall Dock
 ```
 
