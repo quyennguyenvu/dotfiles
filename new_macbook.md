@@ -33,6 +33,7 @@
 - Automatically rearrange Spaces based on most recent use: `disable`
 - Key repeat rate: `max`
 - Delay until repeat: `max-1`
+- Change single quote and double quotes
 
 ### Config keyboard
 
@@ -66,6 +67,7 @@ killall Dock
 - Apprearance &rarr; Windows &rarr; Hide scrollbars: `disable`
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
 - [Config fonts for vscode](https://github.com/romkatv/powerlevel10k/issues/671)
+- Disable all confirmation on shutdown: `enable`
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -93,7 +95,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-#### zsh-autosuggestionss
+#### zsh-autosuggestions
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -153,6 +155,10 @@ tmux source ~/.tmux.conf
 ```
 
 ### Config github ssh key
+
+```bash
+cp -r ~/Dropbox/.confidentiality/.ssh/ ~/.ssh
+```
 
 ```bash
 chmod 400 ~/.ssh/id_rsa_leo && \
