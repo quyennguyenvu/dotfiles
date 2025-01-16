@@ -112,10 +112,14 @@ git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/
 [Guide](https://asdf-vm.com/guide/getting-started.html)
 
 ```bash
+brew install wxwidgets
+brew install openjdk
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 asdf plugin add erlang
 asdf plugin add elixir
 asdf install erlang latest
+# incase install error
+KERL_CONFIGURE_OPTIONS="--disable-jit" asdf install erlang latest
 asdf install elixir latest
 asdf global erlang <latest_version>
 asdf global elixir <latest_version>
@@ -126,6 +130,7 @@ asdf global elixir <latest_version>
 ```bash
 brew install xz
 brew install pyenv
+pyenv install -l
 pyenv install <latest_version>
 pyenv global <latest_version>
 ```
