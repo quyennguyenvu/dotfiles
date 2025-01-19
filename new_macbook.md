@@ -172,6 +172,19 @@ eval "$(ssh-agent -s)" && \
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 ```
 
+### Brave
+
+#### Settings
+
+- Sheld &rarr; Content filtering &rarr; add ABPVN
+- Search engine &rarr; Show search suggestions: `enable`
+- Password manager &rarr; Offer to save passwords and passkeys: `disable`
+
+#### Extensions
+
+- Refined github
+- Dark reader
+
 ### Email
 
 - Download Attachments: `None`
