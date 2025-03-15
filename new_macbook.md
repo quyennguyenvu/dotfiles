@@ -115,7 +115,8 @@ git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/
 ```bash
 brew install wxwidgets
 brew install openjdk
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+brew install asdf
+
 asdf plugin add erlang
 asdf plugin add elixir
 asdf install erlang latest
@@ -176,7 +177,8 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 
 #### Settings
 
-- Sheld &rarr; Content filtering &rarr; add ABPVN
+- Shields &rarr; Content filtering &rarr; add ABPVN
+- Site and Shields Settings &rarr; Permissions: `disallow`
 - Search engine &rarr; Show search suggestions: `enable`
 - Password manager &rarr; Offer to save passwords and passkeys: `disable`
 
@@ -184,6 +186,12 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa_leo
 
 - Refined github
 - Dark reader
+
+### GoTiengViet
+
+- Kiểu gõ: Telex
+- Khởi động khi Login
+- Bỏ chọn "Tự động khôi phục phím với từ sai"
 
 ### Email
 
@@ -203,3 +211,11 @@ Config new vault
 
 - Make fine scale default for volume keys
 - Customize app content: show volume, hide resolution
+- Show quit BetterDisplay in the button bar
+- Show button at the top of the menu
+- Disable "crash report" and "licensing & pro features" in Application
+
+### KeepassXC
+
+- General &rarr; Auto-Type: uncheck `Use entry title to match windows for global Auto-Type`
+- Security: uncheck `Lock databases after inactivity`
