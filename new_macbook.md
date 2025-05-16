@@ -21,7 +21,7 @@
 
 ### System settings
 
-- Turn off all notifications
+- Disable all checkboxes in notification center section, `never` show preview
 - Focus &rarr; Share across devices: `disable`
 - Apprearance
 - Lock Screen: `Require password immediately`
