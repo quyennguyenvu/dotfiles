@@ -69,6 +69,9 @@ killall Dock
 - Import [iterm-leoo-profile.json](./iterm-leoo-profile.json)
 - [Config fonts for vscode](https://github.com/romkatv/powerlevel10k/issues/671)
 - Disable all confirmation on shutdown: `enable`
+- Install `gemini` CLI
+
+### Setup zsh
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -86,20 +89,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### Setup zsh plugins
-
-#### zsh-syntax-highlighting
-
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-#### zsh-autosuggestions
-
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 #### you-should-use
