@@ -3,10 +3,10 @@
 # install-sleep-schedule.sh
 #
 # Schedules macOS to toggle the "Prevent automatic sleeping when the display
-# is off" setting (which is just `pmset -c sleep`) on weekdays:
+# is off" setting (which is just `pmset -c sleep`) every day:
 #
-#   WAKE_HOUR  (default 09:00 Mon-Fri) -> pmset -c sleep 0   = checkbox ON  (stay awake)
-#   SLEEP_HOUR (default 18:00 Mon-Fri) -> pmset -c sleep N   = checkbox OFF (allow sleep)
+#   WAKE_HOUR  (default 09:00 daily) -> pmset -c sleep 0   = checkbox ON  (stay awake)
+#   SLEEP_HOUR (default 18:00 daily) -> pmset -c sleep N   = checkbox OFF (allow sleep)
 #
 # Implemented with two LaunchDaemons in /Library/LaunchDaemons (run as root,
 # which is required to change the -c power profile).
@@ -46,11 +46,9 @@ write_plist() {
     args_xml+="        <string>${a}</string>"$'\n'
   done
 
-  # Mon=1 ... Fri=5
-  local cal_xml="" wd
-  for wd in 1 2 3 4 5; do
-    cal_xml+="        <dict><key>Hour</key><integer>${hour}</integer><key>Minute</key><integer>0</integer><key>Weekday</key><integer>${wd}</integer></dict>"$'\n'
-  done
+  # No Weekday key -> fires every day at the given hour.
+  local cal_xml=""
+  cal_xml+="        <dict><key>Hour</key><integer>${hour}</integer><key>Minute</key><integer>0</integer></dict>"$'\n'
 
   cat > "$path" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,8 +88,8 @@ launchctl load -w "$PLIST_OFF"
 
 echo
 echo "Done. Schedule installed:"
-printf '  %02d:00 Mon-Fri  -> pmset %s sleep 0   (stay awake)\n' "$WAKE_HOUR" "$POWER_FLAG"
-printf '  %02d:00 Mon-Fri  -> pmset %s sleep %s  (allow sleep)\n' "$SLEEP_HOUR" "$POWER_FLAG" "$IDLE_MINUTES"
+printf '  %02d:00 daily  -> pmset %s sleep 0   (stay awake)\n' "$WAKE_HOUR" "$POWER_FLAG"
+printf '  %02d:00 daily  -> pmset %s sleep %s  (allow sleep)\n' "$SLEEP_HOUR" "$POWER_FLAG" "$IDLE_MINUTES"
 echo
 echo "Verify with:"
 echo "  pmset -g | grep ' sleep'"
